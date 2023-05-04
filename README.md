@@ -48,7 +48,7 @@ Edit `config.json` according to your needs:
 $ npm run prefetch -- --avail-start 10m --avail-duration 30
 ```
 
-### Insert a 3-minute ad avail after at the exact time
+### Insert a 3-minute ad avail at the exact time
 ```
 $ npm run prefetch -- --avail-start 2023-05-01T09:30:00Z --avail-duration 180
 ```
