@@ -1,0 +1,21 @@
+{
+    "region": "ap-northeast-1",
+    "channelId": "4563483",
+    "originId": "prefetch-test",
+    "streamIdList": [
+        "group-1",
+        "group-2",
+        "group-3"
+    ],
+    "prefetchParams": {
+        "retrievalParams": {
+            "scte.unique_program_id": "128"
+        },
+        "matchingCriteria": [
+            {
+                "DynamicVariable": "player_params.device_type",
+                "Operator": "EQUALS"
+            }
+        ]
+    }
+}

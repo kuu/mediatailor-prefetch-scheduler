@@ -1,0 +1,73 @@
+{
+  "name": "mediatailor-prefetch-scheduler",
+  "version": "0.0.1",
+  "description": "A CLI for scheduling MediaLive's schedule action (SCTE-35 Splice Insert) and MediaTailor's prefetch at the same time",
+  "main": "index.js",
+  "bin": {
+    "prefetch": "node cli.js"
+  },
+  "type": "module",
+  "author": "Kuu Miiyazaki",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuu/mediatailor-prefetch-scheduler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kuu/mediatailor-prefetch-scheduler/issues"
+  },
+  "homepage": "https://github.com/kuu/mediatailor-prefetch-scheduler#readme",
+  "keywords": [
+    "Streaming",
+    "AWS",
+    "Elemental",
+    "MediaLive",
+    "MediaTailor",
+    "Prefetch"
+  ],
+  "scripts": {
+    "lint": "xo",
+    "audit": "npm audit --audit-level high",
+    "test": "npm run audit && npm run lint && ava",
+    "prefetch": "node cli.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-medialive": "^3.326.0",
+    "@aws-sdk/client-mediatailor": "^3.326.0"
+  },
+  "devDependencies": {
+    "ava": "^5.2.0",
+    "xo": "^0.54.2"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "rules": {
+      "ava/no-unknown-modifiers": 0,
+      "camelcase": 0,
+      "capitalized-comments": 0,
+      "dot-notation": 0,
+      "import/no-dynamic-require": 0,
+      "import/order": 0,
+      "new-cap": 0,
+      "no-await-in-loop": 0,
+      "no-cond-assign": 0,
+      "no-mixed-operators": 0,
+      "no-multi-assign": 0,
+      "no-use-extend-native/no-use-extend-native": 0,
+      "node/prefer-global/buffer": 0,
+      "node/prefer-global/process": 0,
+      "padding-line-between-statements": 0,
+      "quotes": 0,
+      "quote-props": 0,
+      "unicorn/catch-error-name": 0,
+      "unicorn/filename-case": 0,
+      "unicorn/import-style": 0,
+      "unicorn/no-process-exit": 0,
+      "unicorn/no-zero-fractions": 0,
+      "unicorn/prefer-module": 0,
+      "unicorn/prefer-switch": 0,
+      "unicorn/prevent-abbreviations": 0
+    }
+  }
+}
