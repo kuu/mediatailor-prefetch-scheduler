@@ -26,7 +26,12 @@ export function createEMLCommand(channelId, eventId, start, duration) {
 
 export function createEMTCommand(originId, eventId, retrievalStart, retrievalEnd, consumptionStart, consumptionEnd, streamId, {retrievalParams = {}, matchingCriteria = []}) {
   const extra = streamId ? {"StreamId": `${streamId}`} : {};
-  const dynamicVars = Object.assign({'scte.event_id': `${eventId}`}, retrievalParams);
+  const duration = consumptionEnd.getTime() - consumptionStart.getTime();
+  const dynamicVars = Object.assign({
+    'scte.event_id': `${eventId}`,
+    'session.avail_duration_ms': `${duration}`,
+    'session.avail_duration_secs': `${Math.floor(duration / 1000)}`,
+  }, retrievalParams);
   const availMatchingCriteria = [
     {
       "DynamicVariable": "scte.event_id",
@@ -44,8 +49,8 @@ export function createEMTCommand(originId, eventId, retrievalStart, retrievalEnd
       "DynamicVariables": dynamicVars,
     },
     "Consumption": {
-      "StartTime": addTime(consumptionStart, -1),
-      "EndTime": addTime(consumptionEnd, 1),
+      "StartTime": addTime(consumptionStart, -5),
+      "EndTime": addTime(consumptionEnd, 5),
       "AvailMatchingCriteria": availMatchingCriteria,
     },
   }, extra);
