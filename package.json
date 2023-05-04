@@ -1,7 +1,7 @@
 {
   "name": "mediatailor-prefetch-scheduler",
   "version": "0.0.2",
-  "description": "A CLI for scheduling MediaLive's schedule action (SCTE-35 Splice Insert) and MediaTailor's prefetch at the same time",
+  "description": "A CLI for scheduling MediaLive's schedule action (SCTE-35 Splice Insert) and MediaTailor's prefetch requests at the same time",
   "main": "index.js",
   "bin": {
     "prefetch": "node cli.js"
