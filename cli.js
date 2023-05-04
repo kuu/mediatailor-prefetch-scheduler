@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import process from 'node:process';
 import {readFile} from 'node:fs/promises';
 import {filterArgs, checkConfig} from './util.js';
