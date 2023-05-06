@@ -43,7 +43,7 @@ Edit `config.json` according to your needs:
 
 ## Usage
 
-### Insert a 30-second ad avail after 10 minutes
+### Insert a 30-second ad avail in 10 minutes
 ```
 $ npm run prefetch -- --avail-start 10m --avail-duration 30
 ```
